@@ -506,8 +506,8 @@ function state2() {
   for (const previousAnswer of previousAnswers) {
     answers.removeChild(previousAnswer);
   }
-  question.textContent = testArray[rng]["question"];
-  for (const answer of testArray[rng]["answers"]) {
+  question.textContent = testArray[nextIndex]["question"];
+  for (const answer of testArray[nextIndex]["answers"]) {
     const questionLI = document.createElement("li");
     questionLI.textContent = answer;
     answers.appendChild(questionLI);
