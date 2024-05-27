@@ -478,14 +478,7 @@ const testArray = [
 const question = document.querySelector("p");
 const answers = document.querySelector("ul");
 const button = document.querySelector("button");
-
-
-function randomIndex() {
-  const rng = Math.floor(Math.random() * testArray.length);
-  return rng;
-}
-
-let currentIndex = randomIndex()
+let currentIndex = 0
 
 button.addEventListener("click", state2);
 
@@ -501,7 +494,7 @@ function state2() {
   button.removeEventListener("click", state2);
   button.addEventListener("click", state1);
   button.textContent = "Reveal answers";
-  const nextIndex = currentIndex === testArray.length ? randomIndex() : ++currentIndex
+  const nextIndex = currentIndex === testArray.length ? 0 : ++currentIndex
   const previousAnswers = Array.from(document.querySelectorAll("li"));
   for (const previousAnswer of previousAnswers) {
     answers.removeChild(previousAnswer);
