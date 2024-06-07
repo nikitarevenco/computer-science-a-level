@@ -555,6 +555,7 @@ function state1() {
   button.textContent = "Re-generate questions";
   answers.classList.toggle("hidden");
 }
+//oops
 
 function state2() {
   answers.classList.toggle("hidden");
