@@ -475,10 +475,10 @@ const testArray = [
     ],
   },
 ];
+let askedArray = []
 const question = document.querySelector("p");
 const answers = document.querySelector("ul");
 const button = document.querySelector("button");
-let currentIndex = 0
 
 button.addEventListener("click", state2);
 
@@ -494,19 +494,21 @@ function state2() {
   button.removeEventListener("click", state2);
   button.addEventListener("click", state1);
   button.textContent = "Reveal answers";
-  let nextIndex
-  if (currentIndex === testArray.length) {
-    nextIndex = 0
-    currentIndex = 0
-  } else {
-    nextIndex = ++currentIndex
+  if (askedArray.length === testArray.length) {
+    askedArray.shift()
   }
+  const filteredArray = testArray.filter(q => !askedArray.includes( q.question ) )
+  const randomIndex = Math.floor(Math.random() * filteredArray.length)
+  const theQuestion = filteredArray[randomIndex]
+  askedArray.push(theQuestion.question)
+  
   const previousAnswers = Array.from(document.querySelectorAll("li"));
   for (const previousAnswer of previousAnswers) {
     answers.removeChild(previousAnswer);
   }
-  question.textContent = testArray[nextIndex]["question"];
-  for (const answer of testArray[nextIndex]["answers"]) {
+
+  question.textContent = theQuestion.question;
+  for (const answer of theQuestion.answers) {
     const questionLI = document.createElement("li");
     questionLI.textContent = answer;
     answers.appendChild(questionLI);
