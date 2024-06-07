@@ -494,7 +494,13 @@ function state2() {
   button.removeEventListener("click", state2);
   button.addEventListener("click", state1);
   button.textContent = "Reveal answers";
-  const nextIndex = currentIndex === testArray.length ? 0 : ++currentIndex
+  let nextIndex
+  if (currentIndex === testArray.length) {
+    nextIndex = 0
+    currentIndex = 0
+  } else {
+    nextIndex = ++currentIndex
+  }
   const previousAnswers = Array.from(document.querySelectorAll("li"));
   for (const previousAnswer of previousAnswers) {
     answers.removeChild(previousAnswer);
