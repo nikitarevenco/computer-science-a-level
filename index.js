@@ -214,6 +214,22 @@ const testArray = [
       "2. The accumulator holds all input/output and stores data which has come from the RAM",
     ],
   },
+    {
+    question: "Explain the role of the PC in the FDE cycle",
+    answers: [
+      "PC (program counter) holds address of the next instruction to be fetched",
+      "contents of PC are copied to the MAR (memory address register) at the start of every FDE cycle",
+      "incremented by 1 every cycle (after the instruction has been fetched)",
+    ],
+  },
+    {
+    question: "Explain the role of the accumulator in the FDE cycle",
+    answers: [
+      "Holds result of calculations and data which has come from the MDR (memory data register)",
+      "Holds all input/output",
+      "Checked for conditional branching (e.g. BRZ)",
+    ],
+  },
   {
     question: "Compare RISC and CISC instruction sets and evaluate",
     answers: [
