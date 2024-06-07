@@ -112,7 +112,7 @@ const testArray = [
       "1. Materials and fuel used in producing and transporting computers has an environmental impact",
       "2. Devices have short lifespans and are quickly disposed of",
       "3. Often end up in a landfill or are sent to 3rd world countries to be dismantled due to the value of some of the materials inside of them",
-      "4. These devices are often made up of toxic materials such",
+      "4. These devices are often made up of toxic materials such as lead",
       "5. These can harm people disposing of the waste and damage/pollute the area in which they are buried/burned",
       "6. People have many digital devices, these all need powering/charging, which causes an increase in demand in electricity, increase in fossil fuels being burned",
       "7. Computers have encouraged a paperless approach which has the potential deforestation",
