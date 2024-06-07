@@ -167,7 +167,7 @@ const testArray = [
     ],
   },
   {
-    question: "Describe the different modes of addressing memory.",
+    question: "Describe the 4 different modes of addressing memory.",
     answers: [
       "1. Immediate addressing: The operand holds the actual data to be used, LDA 6 would load value 6",
       "2. Immediate addressing allows simple access to data with no fetch required but limited by data size of operand",
@@ -308,7 +308,7 @@ const testArray = [
     ],
   },
   {
-    question: "List the downsides and upsides of optical storage",
+    question: "Give 2 examples of optical storage and describe how it works. Give its upsides and downsides",
     answers: [
       "1. DVD & Blu-ray",
       "2. Works by shining a laser on the media & processing the reflection off the media",
@@ -319,18 +319,48 @@ const testArray = [
   },
   {
     question:
-      "What are the definitions of Class, Object, Attribute, Method, Inheritance, Encapsulation",
+      "What are the definitions of Class",
     answers: [
       "1. Class: Template defining methods and attributes used to make objects",
-      "2. Object: Instantiated from class",
-      "3. Attribute: Variable held by an object",
-      "4. Method: Function an object performs",
-      "5. Inheritance: Class inherits the methods and attributes of parent class, the child can have its own",
-      "6. Encapsulation: Private attributes can only be changed with public methods",
+    ],
+  },
+    {
+    question:
+      "What are the definitions of Object",
+    answers: [
+      "Object: Instantiated from class",
+    ],
+  },
+    {
+    question:
+      "What are the definitions of Attribute",
+    answers: [
+      "Attribute: Variable held by an object",
+    ],
+  },
+    {
+    question:
+      "What are the definitions of Method",
+    answers: [
+      "Method: Function an object performs",
+    ],
+  },
+    {
+    question:
+      "What are the definitions of Inheritance",
+    answers: [
+      "Inheritance: Class inherits the methods and attributes of parent class, the child can have its own",
+    ],
+  },
+    {
+    question:
+      "What is the definition of Encapsulation",
+    answers: [
+      "Encapsulation: Private attributes can only be changed with public methods",
     ],
   },
   {
-    question: "Explain what is meant by ACID",
+    question: "Explain what is meant by ACID and the 4 principles of ACID",
     answers: [
       "1. Atomicity: Change is either performed or not performed. Half-finished changes must halt",
       "2. Consistency: Databases have rules. Transactions should never break these rules",
@@ -339,7 +369,7 @@ const testArray = [
     ],
   },
   {
-    question: "What happens in the TCP/IP stack",
+    question: "What happens in the TCP/IP stack, the 4 steps",
     answers: [
       "1. Application layer: Protocol to be used is decided based on application for eg HTTPS for browser service, +Adds encryption, Passes to transport layer to send, Gets data from transport layer when receiving, +Decrypts message",
       "2. Transport layer: Establishes end-to-end connections, +When connection is made it splits the data to be transmitted into packets, +In every packet there is the number of the packet, the total number of packets, and the port number the packet should use",
@@ -365,7 +395,7 @@ const testArray = [
     ],
   },
   {
-    question: "Explain difference between RAM and ROM",
+    question: "Give 2 features of RAM",
     answers: [
       "1. RAM is volatile",
       "2. RAM is used for storing parts of the OS currently in use",
@@ -374,7 +404,7 @@ const testArray = [
     ],
   },
   {
-    question: "How do compilers work",
+    question: "How do compilers work, 4 stages",
     answers: [
       "1. Lexical analysis: Comments and whitespace removed, variable names added to a symbol table, code turned into a series of tokens",
       "2. Syntax analysis: Abstract syntax tree is built from tokens produced in the previous stage, checks the code follows the syntax, generates errors if any tokens break the rules of the language",
@@ -383,7 +413,7 @@ const testArray = [
     ],
   },
   {
-    question: "Requirements of hashing",
+    question: "Requirements of hashing and what they are useful for",
     answers: [
       "1. Hashes have to be irreversible: Impossible to find the input given only output",
       "2. They must be deterministic: Same input will always give same output",
@@ -441,10 +471,10 @@ const testArray = [
       "The class video has these attributes: • name • number of views • star rating. The constructor method will set the name attribute to the name that is passed in as a parameter. The constructor will also initially set the number of views to 0 and the star rating to 3 Write program code or pseudocode to declare the class video and initialise the required attributes as private.",
     answers: [
       " class Video:",
-      "     def __init__(self, name):",
-      "        self.__name = name",
-      "        self.__views = 0",
-      "        self.__star_rating = 3",
+      "\tdef __init__(self, name):",
+      "\tself.__name = name",
+      "   \t\t     self.__views = 0",
+      "       \t\t self.__star_rating = 3",
     ],
   },
   {
@@ -452,15 +482,15 @@ const testArray = [
       "Each worker has a name and an attendance figure which can be between 0 and 100. Write a definition for a fully encapsulated customer class, providing both get and set methods for all attributes. You do not have to write code for the constructor method",
     answers: [
       " class Customer:",
-      "    def get_name(self):",
-      "        return self.__name",
-      "    def get_attendance(self):",
-      "        return self.__attendance",
-      "    def set_name(self, new_name):",
-      "        self.__name = new_name",
-      "    def set_attendance(self, new_attendance):",
-      "        if 0 <= new_attendance <= 100:",
-      "            self.__attendance = new_attendance",
+      "   \t def get_name(self):",
+      "      \t\t  return self.__name",
+      "    \tdef get_attendance(self):",
+      "     \t\t   return self.__attendance",
+      "   \t def set_name(self, new_name):",
+      "    \t\t    self.__name = new_name",
+      "  \t  def set_attendance(self, new_attendance):",
+      "       \t\t if 0 <= new_attendance <= 100:",
+      "           \t\t\t self.__attendance = new_attendance",
     ],
   },
   {
@@ -468,10 +498,10 @@ const testArray = [
       "Write program code or pseudocode to declare the class house. Define the attributes and constructor method in your answer. You do not need to write the get or set methods. Inherits from building class and has pFloors, pWidth, pHeight, pBedrooms, pBathrooms",
     answers: [
       " class House(Building):",
-      "    def __init__(self, pFloors, pWidth, pHeight, pBedrooms, pBathrooms):",
-      "        super().__init__(pFloors, pWidth, pHeight)",
-      "        self.__bedrooms = pBedrooms",
-      "        self.__bathrooms = pBathrooms",
+      "  \t  def __init__(self, pFloors, pWidth, pHeight, pBedrooms, pBathrooms):",
+      "    \t   \t super().__init__(pFloors, pWidth, pHeight)",
+      "      \t \t self.__bedrooms = pBedrooms",
+      "     \t\t   self.__bathrooms = pBathrooms",
     ],
   },
 ];
