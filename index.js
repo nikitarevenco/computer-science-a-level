@@ -569,7 +569,7 @@ function state2() {
   const theQuestion = filteredArray[randomIndex]
   askedArray.push(theQuestion.question)
   
-  const previousAnswers = Array.from(document.querySelectorAll("li"));
+  const previousAnswers = Array.from(answers.querySelectorAll("li"));
   for (const previousAnswer of previousAnswers) {
     answers.removeChild(previousAnswer);
   }
