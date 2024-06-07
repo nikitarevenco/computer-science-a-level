@@ -522,11 +522,32 @@ const testArray = [
   },
 ];
 let askedArray = []
-const question = document.querySelector("p");
-const answers = document.querySelector("ul");
-const button = document.querySelector("button");
+const question = document.querySelector("#questions-text");
+const answers = document.querySelector("#questions-list");
+const button = document.querySelector("#questions-button");
+
+const allAnswers = document.querySelector("#all-list");
+const allButton = document.querySelector("#all-button");
 
 button.addEventListener("click", state2);
+allButton.addEventListener("click", state4);
+
+for (const everyQuestion of testArray) {
+  const thisQuestion = document.createElement("p")
+  thisQuestion.textContent = everyQuestion.question
+  const thisQuestionUL = document.createElement("ul")
+  for (const answer of everyQuestion.answers) {
+    const thisAnswer = document.createElement("li")
+    thisAnswer.textContent = answer
+    thisQuestionUL.appendChild(thisAnswer)
+  }
+  allAnswers.appendChild(thisQuestion)
+  allAnswers.appendChild(thisQuestionUL)
+}
+
+function state4() {
+  allAnswers.classList.toggle("hidden");
+}
 
 function state1() {
   button.removeEventListener("click", state1);
