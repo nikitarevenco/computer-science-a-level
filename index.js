@@ -1,11 +1,52 @@
 const testArray = [
-  {
-    question: "Explain how a linear search works?",
+    {
+    question: "Compare paging and segmentation",
     answers: [
-      "1. Linear search compares the search item with the first value",
-      "2. Then it compares the search item with the next value",
-      "3. Repeat steps 1-2 until the end of the array has been reached, in which case it returns -1 as the search value wasnt found",
-      "4. Repeat steps 1-2 until the search item is found, then return the array position",
+      "Both paging and segmentation allow programs to run despite there not being a sufficiently sized, continuous block of free memory",
+      "Segmentation logically divides memory into complete sections of programs, so different segments may be different sizes",
+      "Paging divides memory into arbitrarily-sized, fixed size pages that are physical divisions",
+      "Pages and segments are both stored on disk",
+    ],
+  },
+      {
+    question: "Describe the interrupt service routine",
+    answers: [
+      "Interrupts are checked for at the start of FDE cycle",
+      "Interrupts are modelled as a priority queue, where the highest priority interrupts are served first",
+      "If the interrupt's priority is higher than the current process' priority, the contents of registers are copied to the stack and the interrupt service routine runs",
+      "After the interrupt has been completed, previous register values are restored back from stack",
+      "An interrupt can interrupt an interrupt if the interrupt's priority is higher than the current interrupt, in which case the above steps are repeated",
+    ],
+  },
+          {
+    question: "List 7 utility software",
+    answers: [
+      "File Management",
+      "Backup",
+      "Disk Defragmentation",
+      "Compression",
+      "Device Drivers",
+      "Antivirus",
+      "File Repair",
+    ],
+  },
+            {
+    question: "What are the 3 types of wire cables",
+    answers: [
+      "Twisted Pair: Largely affected by noise, low cost and low bandwidth",
+      "Coaxial Cables: Less affected by noise, mid cost and mid bandwidth",
+      "Fibre Optic: Not affected by noise, high cost and high bandwidth",
+    ],
+  },
+        {
+    question: "Advantages and disadvantages of virtual storage",
+    answers: [
+      "+++ Accessed at any time from any device as long as there is an internet connection",
+      "+++ Easy to collaborate with others",
+      "+++ Easier to scale than physical storage",
+      "--- Can be more expensive than physical storage",
+      "--- If the internet connection is slow, the access times will also be slow",
+      "--- No internet connection means no access to files",
     ],
   },
   {
@@ -34,15 +75,21 @@ const testArray = [
       "3. Can be taken and used in different programs as well as the program they are written in",
     ],
   },
-  {
-    question: "Compare breadth-first and depth-first traversal",
+    {
+    question: "Describe how websites are indexed",
     answers: [
-      "1. Breadth is more efficient when the data searched for is closer to the root",
-      "2. Depth is more efficient when the data to be search for is further down",
-      "3. Depth memory requirement is linear",
-      "4. Depth can be written recursively to aid understanding",
-      "5. Breadth in general is better time complexity",
-      "6. In large trees depth may never return a value",
+      "Web crawler visits site by following a link or selecting from list",
+      "Records information such as text",
+      "Stores the position of each word within the page in an index",
+      "Follows links to other sites",
+    ],
+  },
+      {
+    question: "Give the 3 main factors affecting the PageRank(site) output",
+    answers: [
+      "Damping factor: value between 0 and 1 which is a probability that a user will follow a link",
+      "Number of links to target site",
+      "And the PageRank(site) score of those other sites",
     ],
   },
   {
@@ -120,11 +167,14 @@ const testArray = [
     ],
   },
   {
-    question: "What is the purpose of a network switch",
+    question: "List networking hardware",
     answers: [
-      "1. Joins computers together on a LAN",
-      "2. Receives and sends data to the specific computer",
-      "3. Recipient's address is given in packet header",
+      "Hub: Allows multiple devices to connect to one network by broadcasting received transmissions to connected devices",
+      "Switch: Like hub, but inspects transmissions keeping unnecessary traffic to a minimum and faster data transfer",
+      "Modem: Turns digital information FROM computer INTO analogue signals (and vice versa) that can be sent across wires",
+      "Router: Routes data between devices on a LAN or a WAN",
+      "Network Interface Controller: Allows both wired and wireless communications between computers",
+      "Wireless Access Point: Creates a wireless LAN by connecting to a wired router/switch/hub and the WiFi has limited range",
     ],
   },
   {
@@ -207,13 +257,6 @@ const testArray = [
       "4. Waterfall is good where requirements are very clear and outcomes are known.",
     ],
   },
-  {
-    question: "How is the PC and accumulator used during the FDE cycle",
-    answers: [
-      "1. The PC holds the address of the next instruction to be fetched/decoded, contents copied to MAR at start of FDE, incremented by +1 every cycle",
-      "2. The accumulator holds all input/output and stores data which has come from the RAM",
-    ],
-  },
     {
     question: "Explain the role of the PC in the FDE cycle",
     answers: [
@@ -241,17 +284,7 @@ const testArray = [
       "6. CISC are more expensive and less power efficient and require larger battery and cooling mechanics but can accomplish more",
     ],
   },
-  {
-    question:
-      "State the worst, best and average time complexity for a binary & linear search, and merge sort and quick sort and insertion sort",
-    answers: [
-      "1. Binary search -> Worst: O(1), Best: O(1), Average: O(log(n))",
-      "2. Linear search -> Worst: O(1), Best: O(1), Average: O(n)",
-      "3. Merge sort -> Worst, Best, Average: O(nlog(n))",
-      "4. Quick sort -> Worst: O(n^2), Best, Average: O(nlog(n))",
-      "5. Insertion sort -> Worst, Average: O(n^2), Best: O(n)",
-    ],
-  },
+
   {
     question:
       "Describe the features & impact of an IDE and (Integrated development environment)",
@@ -294,26 +327,7 @@ const testArray = [
       "5. Real-time: Plenty of redundancy is built into these systems so they can handle sudden increases in input, these rarely run at capacity, runs actions within a guaranteed amount of time",
     ],
   },
-  {
-    question: "Explain how a bubble sort works?",
-    answers: [
-      "1. Bubble Sort iteratively compares adjacent elements in the array.",
-      "2. If the current element is larger than the next, they swap positions.",
-      "3. This process repeats for each pair of adjacent elements, 'bubbling up' the largest element to the end of the array.",
-      "4. The process is repeated for the remaining unsorted portion of the array, reducing its size by one each time.",
-      "5. Sorting concludes when no more swaps are needed.",
-    ],
-  },
-  {
-    question: "Explain how a binary search works?",
-    answers: [
-      "1. Binary Search operates on a sorted array.",
-      "2. It begins by comparing the middle element of the array with the target value.",
-      "3. If the target value matches the middle element, the search concludes.",
-      "4. If the target is smaller, the search continues on the left half of the array; if larger, on the right half.",
-      "5. This halving continues until the target is found or the subarray reduces to zero size.",
-    ],
-  },
+
   {
     question: "Compare Harvard and Von Neumann Architecture",
     answers: [
@@ -331,48 +345,6 @@ const testArray = [
       "2. Optical storage is cheap to produce",
       "3. It is also lightweight & portable",
       "4. Optical storage has slow access time & it is prone to scratches",
-    ],
-  },
-  {
-    question:
-      "What are the definitions of Class",
-    answers: [
-      "1. Class: Template defining methods and attributes used to make objects",
-    ],
-  },
-    {
-    question:
-      "What are the definitions of Object",
-    answers: [
-      "Object: Instantiated from class",
-    ],
-  },
-    {
-    question:
-      "What are the definitions of Attribute",
-    answers: [
-      "Attribute: Variable held by an object",
-    ],
-  },
-    {
-    question:
-      "What are the definitions of Method",
-    answers: [
-      "Method: Function an object performs",
-    ],
-  },
-    {
-    question:
-      "What are the definitions of Inheritance",
-    answers: [
-      "Inheritance: Class inherits the methods and attributes of parent class, the child can have its own",
-    ],
-  },
-    {
-    question:
-      "What is the definition of Encapsulation",
-    answers: [
-      "Encapsulation: Private attributes can only be changed with public methods",
     ],
   },
   {
@@ -441,83 +413,54 @@ const testArray = [
   {
     question: "Explain what is meant by Packet Switching",
     answers: [
-      "1. Data is split into chunks called packets which have labels including address being sent to and order",
-      "2. Each packet is sent on the most convenient route meaning they may arrive in a different order to which they were sent",
-      "3. Once packets arrive they are reordered",
+      "Breaks streams of data into packets each sent independently",
+      "At each node packets are sent via the least congested route, maximizing bandwidth",
+      "Quality of transmission is not guaranteed",
+      "Packets can take different routes to their destination and arrive out of order",
+      "More affordable than circuit switching as all bandwidth can be used at once",
+      "Requires less complex infrastructure and can respond if parts of a network fail",
+    ],
+  },
+    {
+    question: "Discuss features of client-server model",
+    answers: [
+      "Server controls access to file store and access to the internet",
+      "The clients make requests to the server",
+      "+++ Easier to manage file security & backups",
+      "+++ Easier to install and update software on all computers",
+      "--- Single point of failure",
+      "--- Can be expensive to setup and maintain",
+      "--- Users lose connection if server fails",
+      "--- Requires professionals to maintain",
+    ],
+  },
+      {
+    question: "Discuss features of peer-to-peer model",
+    answers: [
+      "Every peer is equal",
+      "+++ Cheaper to setup and maintain",
+      "+++ No dependency on single server",
+      "+++ Professionals are not required to maintain",
+      "--- Network is less secure",
+      "--- Users have to manage own backups",
+      "--- Can be difficult to coordinate between all users",
+    ],
+  },
+    {
+    question: "Explain what is meant by Circuit Switching",
+    answers: [
+      "Creates a temporary and dedicated link of fixed bandwidth between the source and destination",
+      "Link only lasts until the transmission is complete",
+      "Guarantees quality of tramission through dedicated bandwidth",
+      "Amazing for data that needs a constant end-to-end link like real-time video",
+      "Downside is that a lot of the potential bandwidth can be wasted",
+      "All packets use the same path",
     ],
   },
   {
     question: "Explain what is meant by a library",
     answers: [
       "1. Library is a section of code written by other programmers containing useful routines like GUI routines, encryption",
-    ],
-  },
-  {
-    question: "Explain how an Insertion sort works?",
-    answers: [
-      "1. Insertion Sort builds a sorted subarray at the beginning of the array.",
-      "2. It starts with the second element, comparing it with the first and swapping if necessary.",
-      "3. It then picks the next element and inserts it into its correct position within the sorted subarray.",
-      "4. This process continues, incrementally extending the sorted subarray and inserting the next element in the correct position.",
-      "5. The sort completes when the entire array is sorted.",
-    ],
-  },
-  {
-    question: "Explain how a selection sort works?",
-    answers: [
-      "1. Selection Sort divides the array into a sorted and an unsorted subarray.",
-      "2. It repeatedly selects the smallest (or largest) element from the unsorted subarray.",
-      "3. This element is then swapped with the first unsorted element, moving it to the sorted subarray.",
-      "4. The boundary between sorted and unsorted subarrays shifts one element to the right.",
-      "5. The process repeats until the entire array is sorted.",
-    ],
-  },
-  {
-    question: "Explain how a quick sort works?",
-    answers: [
-      "1. Quick Sort selects a 'pivot' element from the array.",
-      "2. The array is partitioned into two subarrays: elements less than the pivot and elements greater than the pivot.",
-      "3. The pivot is then placed in its correct sorted position.",
-      "4. The process is recursively applied to the two subarrays.",
-      "5. The sort concludes when the base case of a subarray with fewer than two elements is reached.",
-    ],
-  },
-  {
-    question:
-      "The class video has these attributes: • name • number of views • star rating. The constructor method will set the name attribute to the name that is passed in as a parameter. The constructor will also initially set the number of views to 0 and the star rating to 3 Write program code or pseudocode to declare the class video and initialise the required attributes as private.",
-    answers: [
-      " class Video:",
-      "\tdef __init__(self, name):",
-      "\tself.__name = name",
-      "   \t\t     self.__views = 0",
-      "       \t\t self.__star_rating = 3",
-    ],
-  },
-  {
-    question:
-      "Each worker has a name and an attendance figure which can be between 0 and 100. Write a definition for a fully encapsulated customer class, providing both get and set methods for all attributes. You do not have to write code for the constructor method",
-    answers: [
-      " class Customer:",
-      "   \t def get_name(self):",
-      "      \t\t  return self.__name",
-      "    \tdef get_attendance(self):",
-      "     \t\t   return self.__attendance",
-      "   \t def set_name(self, new_name):",
-      "    \t\t    self.__name = new_name",
-      "  \t  def set_attendance(self, new_attendance):",
-      "       \t\t if 0 <= new_attendance <= 100:",
-      "           \t\t\t self.__attendance = new_attendance",
-    ],
-  },
-  {
-    question:
-      "Write program code or pseudocode to declare the class house. Define the attributes and constructor method in your answer. You do not need to write the get or set methods. Inherits from building class and has pFloors, pWidth, pHeight, pBedrooms, pBathrooms",
-    answers: [
-      " class House(Building):",
-      "  \t  def __init__(self, pFloors, pWidth, pHeight, pBedrooms, pBathrooms):",
-      "    \t   \t super().__init__(pFloors, pWidth, pHeight)",
-      "      \t \t self.__bedrooms = pBedrooms",
-      "     \t\t   self.__bathrooms = pBathrooms",
     ],
   },
 ];
