@@ -96,6 +96,13 @@ const testArray = [
       "It keeps the changes after the function ends",
     ],
   },
+{
+    question: "Give examples of contemporary processors",
+    answers: [
+      "SIMD (Single Instruction Multiple Data): Parallel Processing where a processor carries out a single instruction on multiple data at the same time - often used by graphic processors",
+      "MIMD (Multiple Instruction Multiple Data): Multiple Instructions being carried across multiple data items across several cores",
+    ],
+  },
   {
     question: "Give 3 benefits of writing a program with reusable components",
     answers: [
