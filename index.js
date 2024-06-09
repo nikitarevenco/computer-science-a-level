@@ -675,42 +675,42 @@ const testArray = [
     question:
       "What are the definitions of Class",
     answers: [
-      "1. Class: Template defining methods and attributes used to make objects",
+      "Template defining methods and attributes used to make objects",
     ],
   },
     {
     question:
       "What are the definitions of Object",
     answers: [
-      "Object: Instantiated from class",
+      "Instantiated from class",
     ],
   },
     {
     question:
       "What are the definitions of Attribute",
     answers: [
-      "Attribute: Variable held by an object",
+      "Variable held by an object",
     ],
   },
     {
     question:
       "What are the definitions of Method",
     answers: [
-      "Method: Function an object performs",
+      "Function an object performs",
     ],
   },
     {
     question:
       "What are the definitions of Inheritance",
     answers: [
-      "Inheritance: Class inherits the methods and attributes of parent class, the child can have its own",
+      "Class inherits the methods and attributes of parent class, the child can have its own",
     ],
   },
     {
     question:
       "What is the definition of Encapsulation",
     answers: [
-      "Encapsulation: Private attributes can only be changed with public methods",
+      "Private attributes can only be changed with public methods",
     ],
   },
 
