@@ -18,14 +18,34 @@ const testArray = [
         "Shortest job first",
     ],
   },
+            {
+    question: "What are the benefits of using two's complement over sign and magnitude",
+    answers: [
+      "Calculations are more easily performed on two's complement",
+      "Two's complement can represent more numbers (1000 000 gives -128 in two's complement, 1111 1111 gives -127 in sign and magnitude)",
+      "Two's complement has only one representation for zero, sign and magnitude can represent zero in two ways",
+    ],
+  },
+            {
+    question: "What is the difference between an array and a list",
+    answers: [
+      "Array is of a defined size that cannot change",
+      "Array can only hold one type of data",
+      "Size of a list can change",
+      "List can hold multiple types of data",
+    ],
+  },
       {
     question: "Describe the interrupt service routine",
     answers: [
       "Interrupts are checked for at the start of FDE cycle",
-      "Interrupts are modelled as a priority queue, where the highest priority interrupts are served first",
-      "If the interrupt's priority is higher than the current process' priority, the contents of registers are copied to the stack and the Interrupt Service Routine (ISR) runs",
-      "After the interrupt has been completed, previous register values are restored back from stack",
-      "An interrupt can interrupt an interrupt if the interrupt's priority is higher than the current interrupt, in which case the above steps are repeated",
+        "If the interrupt is of a lower or equal priority than the current process then the current process continues",
+        "If an interrupt is raised contents of registers are copied to stack",
+        "Flags are set to determine if the interrupts are enabled / disabled",
+        "Interrupt service routine runs",
+        "After interrupt complete, previous register values restored back from stack",
+        "Flag is reset",
+        "If higher priority interrupt received during servicing of interrupt this is added to the stack and new interrupt dealt with"
     ],
   },
           {
@@ -293,8 +313,28 @@ const testArray = [
       "Using up-to-date software and restricted access to wireless networks can limit risks, as well as not using USBs",
     ],
   },
+            {
+    question: "Describe the Copyright Designs and Patents Act",
+    answers: [
+      "Gives authors ownership right of intellectual property",
+      "This is automatic and there is no need to apply",
+      "Other people using/distributing can be prosecuted IF THEY are not given permission",
+      "Permission can be given eg if they pay",
+    ],
+  },
+                {
+    question: "What are some of the main SQL commands you should know?",
+    answers: [
+      "DROP TABLE <table>",
+      "SELECT <field1>, <field2>... FROM <table> WHERE <condition(s)>",
+        "DELETE FROM <table> WHERE <condition>",
+      "INSERT INTO <table> <field1> <field2> VALUES <value1> <value2>",
+      "The following can be substituted into any table::: <table1> JOIN <table2> ON <table1>.<field> = <table2>.<field>",
+        "eg: SELECT field1, field2 FROM Student JOIN Teachers ON Student.room = Teachers.room WHERE Student.TutorGroup = '10B'",
+    ],
+  },
   {
-    question: "Describe the computer misuse act",
+    question: "Describe the Computer Misuse Act",
     answers: [
       "Legislation aimed at criminalising:",
       "Unauthorised access to a computer system, Unauthorised access with intent to commit further offences, Unauthorised modification of computer material",
@@ -495,10 +535,10 @@ const testArray = [
   {
     question: "Types of Operating Systems",
     answers: [
-      "Multi-tasking: Runs multiple programs at once",
-      "Embedded: Run on dedicated hardware using low-power processors with very little memory, for example on a washing machine",
-      "Distributed: The OS controls and coordinates the computers presenting them to the user as if they were one system",
-      "Multi-User: Computer manages the user's permissions and access rights when they log in, server OS software handles multiple people using different computers on a network at the same time",
+      "Multi-tasking: Runs multiple programs at the same time",
+      "Embedded: Has a dedicated function and is read-only",
+      "Distributed: Allows multiple computers to work together on a single task",
+      "Multi-User: Allows multiple users at the same time",
       "Real-time: Plenty of redundancy is built into these systems so they can handle sudden increases in input, these rarely run at capacity, runs actions within a guaranteed amount of time",
     ],
   },
@@ -582,6 +622,7 @@ const testArray = [
       "Hashes must have collision resistance: Reduce number of collisions by making sure all outputs are equally likely",
       "Hashes are useful for searching through hash tables fast",
       "Hashes are also useful for encryption",
+        "But not useful for data that needs to be recovered",
     ],
   },{
     question: "Explain what is meant by Circuit Switching",
@@ -676,6 +717,10 @@ const testArray = [
         {
     question: "Advantages and disadvantages of assembly language",
     answers: [
+        "Uses mnemonics",
+        "Uses an assembler to convert to machine code",
+        "One-to-one conversion to machine code",
+        "Allows direct control of the processor",
       "+++ Assembly language has the same efficiency of execution as machine code due to its one-to-one nature",
       "+++ It can produce very precise, locally optimised and efficient code.",
       "+++ It provides direct access to system-level features without having to go through a software interface",
