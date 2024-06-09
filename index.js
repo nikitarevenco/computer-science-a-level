@@ -706,6 +706,31 @@ const testArray = [
       "Class inherits the methods and attributes of parent class, the child can have its own",
     ],
   },
+        {
+    question:
+      "What is a D type flip flop",
+    answers: [
+      "Memory device that is enabled and disabled by a clock signal",
+        "Can be edge-triggered, allowing synchronisation with other components",
+    ],
+  },
+            {
+    question:
+      "How can you make a full adder",
+    answers: [
+      "By combining together 2 half adders with an OR gate",
+        "Half adder is made from a XOR and an AND gate",
+    ],
+  },
+                {
+    question:
+      "Describe input, output and storage devices and examples",
+    answers: [
+      "Input devices pass information into a computer system. eg Mouse, Keyboard, Camera, Joystick",
+        "Output devices take data in digital form and convert into another format that humans can process such as sound or images eg Printer, Speakers, Headphones, Projector",
+        "Storage devices are used for either temporary or permanent storage of data. Can be internal (RAM, SSD, Magnetic hard drive) or external (DVD, USB, memory card)",
+    ],
+  },
     {
     question:
       "What is the definition of Encapsulation",
@@ -713,6 +738,46 @@ const testArray = [
       "Private attributes can only be changed with public methods",
     ],
   },
+        {
+    question:
+      "What are some ways of capturing data",
+    answers: [
+      "OCR: Optical Character Recognition: Automatically reads text by interpreting the shape of the letters. Works better with printed text than handwriting.",
+        "OMR: Optical Mark Recognition: Used for multiple choice tests",
+    ],
+  },
+        {
+    question:
+      "What are the benefits of using a DBMS",
+    answers: [
+      "Database Management System (DBMS)",
+        "Prevents the creation of duplicate primary keys",
+        "Enforces validation rules",
+        "Provides secure access",
+        "Provides encryption",
+        "Helps manage multiple users",
+    ],
+  },
+    {
+    question:
+      "Give an example of a declarative language and a procedural/imperative",
+    answers: [
+      "Procedural give step by step instructions by laying code out as a series of steps such as iteration and making use of functions. Focus on describing how a program works",
+        "Declarative. Describes what a program should do. Example: SQL",
+    ],
+  },
+        {
+    question:
+      "Open Source vs Closed Source (Proprietary) Software",
+    answers: [
+      "Proprietay software usually has a fee and open source is likely to be free",
+        "Users cannot modify proprietary software whereas they can modify open source",
+        "Proprietary is protected by Copyright Design and Patents act, open source code can be copied",
+        "Open source software is supported by the community. Proprietary is tested and well built.",
+        "Open source has its code public, proprietary has its code hidden.",
+    ],
+  },
+    
 
         {
     question: "Advantages and disadvantages of assembly language",
@@ -732,9 +797,13 @@ const testArray = [
     ],
   },
   {
-    question: "Explain what is meant by a library",
+    question: "Explain what is meant by a library and disadvantages and advantages",
     answers: [
       "Library is a section of code written by other programmers containing useful routines like GUI routines, encryption",
+        "+++ They save time because no need to rewrite the code",
+        "+++ Already tested and the programmer doesn't need to test them themselves",
+        "--- May increase size of compiled file as library may contain routines that are never used",
+        "--- Not written by the programmer so the programmer may need to spend time familiarising themselves with it",
     ],
   },
 ];
