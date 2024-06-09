@@ -19,6 +19,17 @@ const testArray = [
     ],
   },
             {
+    question: "What are the steps to normalise a database to 3NF",
+    answers: [
+      "(1NF) All field names must be unique",
+      "(1NF) All tables must have a primary key",
+      "(1NF) Must be no repeated fields",
+      "(1NF) All data in the fields needs to be atomic so that it cannot be further split up",
+        "(2NF) Partial dependencies should be removed (eg many-to-many relationships)",
+        "(3NF) Non-key dependencies should be removed",
+    ],
+  },
+            {
     question: "What are the benefits of using two's complement over sign and magnitude",
     answers: [
       "Calculations are more easily performed on two's complement",
