@@ -340,6 +340,16 @@ const testArray = [
         "eg: SELECT field1, field2 FROM Student JOIN Teachers ON Student.room = Teachers.room WHERE Student.TutorGroup = '10B'",
     ],
   },
+{
+    question:
+      "Give names of 4 legislations",
+    answers: [
+      "Computer Misuse Act",
+        "Regulation of Investigatory Powers Act", 
+"Data Protection Act",
+"Copyright Design and Patents Act",
+    ],
+  },
   {
     question: "Describe the Computer Misuse Act",
     answers: [
@@ -773,6 +783,7 @@ const testArray = [
         "Declarative. Describes what a program should do. Example: SQL",
     ],
   },
+
         {
     question:
       "Open Source vs Closed Source (Proprietary) Software",
