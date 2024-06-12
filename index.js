@@ -275,6 +275,7 @@ const testArray = [
           {
     question: "Best (B), Average (A), Worst (W) and Space (S) complexities of Linear Search, Binary Search, Bubble Sort, Insertion Sort, Merge Sort, Quick Sort",
     answers: [
+        "Yes it sucks but we have to memorise it :(",
       "BUBBLE SORT (B): O(n), (A): O(n^2), (W): O(n^2), (S): O(1)",
         "INSERTION SORT (B): O(n), (A): O(n^2), (W): O(n^2), (S): O(1)",
         "MERGE SORT (B): O(n log n), (A): O(n log n), (W): O(n log n), (S): O(1)",
